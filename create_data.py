@@ -1,4 +1,3 @@
-import pandas as pd
 import requests
 
 dataset_path = './datasets/titanic.csv'
@@ -8,5 +7,3 @@ response = requests.get(url)
 
 with open(dataset_path, 'wb') as file:
     file.write(response.content)
-
-df = pd.read_csv(dataset_path)
